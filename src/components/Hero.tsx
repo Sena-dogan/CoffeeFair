@@ -12,7 +12,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="md:col-span-3 md:row-span-2 bg-[var(--color-brand-bg)] rounded-3xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden shadow-sm"
+          className="md:col-span-3 md:row-span-2 bg-[var(--color-brand-bg)] rounded-3xl p-8 md:p-12 flex flex-col justify-center relative overflow-hidden shadow-sm"
         >
           <div className="absolute -top-10 -right-10 opacity-5 rotate-12">
             <Coffee className="w-64 h-64 text-[var(--color-brand-accent)]" />
