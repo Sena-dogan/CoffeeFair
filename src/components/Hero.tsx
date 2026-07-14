@@ -11,7 +11,7 @@ export function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/images/hero-coffee.png"
+          src={`${import.meta.env.BASE_URL}images/hero-coffee.png`}
           alt="Elegant coffee catering setup"
           className="w-full h-full object-cover object-center grayscale-[0.3]"
         />

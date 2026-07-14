@@ -4,19 +4,19 @@ const services = [
   {
     title: "Custom Coffee Roasting",
     description: "We carefully select green coffee beans from various regions around the world and roast them with precision to create flavors tailored specifically for you.",
-    image: "/images/services-roasting.png",
+    image: `${import.meta.env.BASE_URL}images/services-roasting.png`,
     reverse: false,
   },
   {
     title: "Fair & Corporate Event Catering",
     description: "Bring the cafe experience to your events. Our professional baristas serve exceptional espresso-based drinks, filter coffee, and more, ensuring a memorable experience for your guests.",
-    image: "/images/services-catering.png",
+    image: `${import.meta.env.BASE_URL}images/services-catering.png`,
     reverse: true,
   },
   {
     title: "Custom Stand Design",
     description: "We design and decorate coffee stands that align perfectly with your brand identity, providing a cohesive and premium look for your corporate presence.",
-    image: "/images/services-stand.png",
+    image: `${import.meta.env.BASE_URL}images/services-stand.png`,
     reverse: false,
   }
 ];

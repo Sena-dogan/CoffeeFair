@@ -30,7 +30,7 @@ export function Portfolio() {
             transition={{ duration: 0.5 }}
             className="md:col-span-2 md:row-span-2 aspect-square md:aspect-auto overflow-hidden bg-stone-200 rounded-sm"
           >
-             <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=1200" alt="Corporate Event" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
+             <img src={`${import.meta.env.BASE_URL}images/portfolio-event.png`} alt="Corporate Event" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -39,7 +39,7 @@ export function Portfolio() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="aspect-square overflow-hidden bg-stone-200 rounded-sm"
           >
-             <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=600" alt="Coffee Setup" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
+             <img src={`${import.meta.env.BASE_URL}images/portfolio-setup.png`} alt="Coffee Setup" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
           </motion.div>
           <motion.div 
              initial={{ opacity: 0, scale: 0.95 }}
@@ -48,7 +48,7 @@ export function Portfolio() {
              transition={{ duration: 0.5, delay: 0.2 }}
             className="aspect-square overflow-hidden bg-stone-200 rounded-sm"
           >
-             <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=600" alt="Latte Art" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
+             <img src={`${import.meta.env.BASE_URL}images/portfolio-latte-art.png`} alt="Latte Art" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
           </motion.div>
            <motion.div 
              initial={{ opacity: 0, scale: 0.95 }}
@@ -57,7 +57,7 @@ export function Portfolio() {
              transition={{ duration: 0.5, delay: 0.3 }}
             className="aspect-[2/1] md:aspect-auto md:col-span-2 overflow-hidden bg-stone-200 rounded-sm"
           >
-             <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1200" alt="Coffee Stand" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
+             <img src={`${import.meta.env.BASE_URL}images/portfolio-stand.png`} alt="Coffee Stand" className="w-full h-full object-cover hover:scale-105 grayscale-[0.2] hover:grayscale-0 transition-transform duration-700" />
           </motion.div>
         </div>
 

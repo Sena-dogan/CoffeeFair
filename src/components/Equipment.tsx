@@ -4,17 +4,17 @@ const equipmentList = [
   {
     category: "Espresso Machines",
     items: ["VBM Lollo", "La Marzocco", "Magister"],
-    image: "/images/equipment-espresso.png",
+    image: `${import.meta.env.BASE_URL}images/equipment-espresso.png`,
   },
   {
     category: "Filter Coffee & Automatic",
     items: ["KEF", "Myco", "Jura X3", "Jura X8c"],
-    image: "/images/equipment-auto.png",
+    image: `${import.meta.env.BASE_URL}images/equipment-auto.png`,
   },
   {
     category: "Grinders",
     items: ["Cunill", "Mahlkönig"],
-    image: "/images/equipment-grinder.png",
+    image: `${import.meta.env.BASE_URL}images/equipment-grinder.png`,
   }
 ];
 

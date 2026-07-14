@@ -133,14 +133,14 @@ export function Menu() {
           <div className="lg:w-1/2 flex justify-center gap-6">
             <div className="bg-stone-200 rounded-sm p-2 w-48 aspect-square flex items-center justify-center overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&q=80&w=600" 
+                src={`${import.meta.env.BASE_URL}images/menu-coffee-cups.png`} 
                 alt="Custom coffee cups" 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-105 transition-all duration-500"
               />
             </div>
             <div className="bg-stone-200 rounded-sm p-2 w-48 aspect-square hidden md:flex items-center justify-center overflow-hidden">
                <img 
-                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=600" 
+                src={`${import.meta.env.BASE_URL}images/menu-cold-cups.png`} 
                 alt="Cold beverage cups" 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-105 transition-all duration-500"
               />
