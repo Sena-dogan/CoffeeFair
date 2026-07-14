@@ -20,7 +20,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-sm border-b border-stone-200/60 transition-all duration-300">
+    <nav className="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-2xl shadow-sm border-b border-white/50 transition-all duration-300">
       <motion.div
         className="absolute top-0 left-0 right-0 h-[2px] bg-[var(--color-brand-accent)] origin-left z-[60]"
         style={{ scaleX }}
@@ -28,11 +28,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-full border-2 border-[var(--color-brand-accent)] flex items-center justify-center">
-            <div className="w-1.5 h-4 bg-[var(--color-brand-accent)] rotate-12 transition-transform group-hover:rotate-45"></div>
+          <div className="w-10 h-10 rounded-full border-[3px] border-[var(--color-brand-accent)] flex items-center justify-center bg-white/40 backdrop-blur-md shadow-sm">
+            <div className="w-2 h-5 bg-[var(--color-brand-accent)] rotate-12 transition-transform group-hover:rotate-45"></div>
           </div>
-          <div className="flex flex-col">
-            <span className="font-serif italic text-lg tracking-tight">Coffee Fair <span className="font-sans not-italic text-sm font-light uppercase tracking-widest opacity-60 ml-1">and more</span></span>
+          <div className="flex flex-col text-[var(--color-brand-text)]">
+            <span className="font-serif italic text-2xl font-bold tracking-tight">Coffee Fair <span className="font-sans not-italic text-[10px] font-bold uppercase tracking-widest opacity-80 ml-2">and more</span></span>
           </div>
         </a>
 
@@ -42,7 +42,7 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-[11px] uppercase tracking-[0.2em] font-medium text-[var(--color-brand-text)] hover:text-[var(--color-brand-accent)] transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-[var(--color-brand-accent)] hover:after:w-full after:transition-all after:duration-300"
+              className="text-[12px] uppercase tracking-[0.2em] font-bold text-[var(--color-brand-text)] hover:text-[var(--color-brand-accent)] transition-colors relative after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-brand-accent)] hover:after:w-full after:transition-all after:duration-300"
             >
               {link.name}
             </a>

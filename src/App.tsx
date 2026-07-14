@@ -13,6 +13,8 @@ import { Portfolio } from "./components/Portfolio";
 import { ContactForm } from "./components/ContactForm";
 import { Contact } from "./components/Contact";
 
+import { ScrollToTop } from "./components/ScrollToTop";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-[var(--color-brand-bg)] text-[var(--color-brand-text)] font-sans">
@@ -25,6 +27,7 @@ export default function App() {
       <Portfolio />
       <ContactForm />
       <Contact />
+      <ScrollToTop />
     </div>
   );
 }

@@ -41,7 +41,7 @@ export function Services() {
           {services.map((service, index) => (
             <div 
               key={service.title} 
-              className={`flex flex-col ${service.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-24`}
+              className={`flex flex-col ${service.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-16`}
             >
               {/* Image Container */}
               <motion.div 
@@ -49,7 +49,7 @@ export function Services() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="w-full lg:w-5/12 aspect-[4/3] lg:aspect-[3/4] overflow-hidden rounded-sm relative group"
+                className="w-full lg:w-1/2 aspect-[16/9] lg:aspect-[4/3] overflow-hidden rounded-2xl relative group shadow-sm"
               >
                 <img 
                   src={service.image} 
@@ -65,11 +65,11 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full lg:w-7/12 flex flex-col items-start"
+                className="w-full lg:w-1/2 flex flex-col items-start lg:px-8"
               >
-                <span className="text-[10px] tracking-[0.2em] text-stone-400 uppercase font-bold mb-4">0{index + 1}</span>
-                <h3 className="text-3xl md:text-4xl font-serif text-[var(--color-brand-text)] mb-4">{service.title}</h3>
-                <p className="text-stone-500 text-sm font-light leading-relaxed mb-8 max-w-md">
+                <span className="text-[12px] tracking-[0.2em] text-[var(--color-brand-accent)] uppercase font-bold mb-4">0{index + 1}</span>
+                <h3 className="text-4xl md:text-5xl font-serif text-[var(--color-brand-text)] mb-6">{service.title}</h3>
+                <p className="text-stone-500 text-base md:text-lg font-light leading-relaxed mb-8 max-w-xl">
                   {service.description}
                 </p>
                 <div className="w-12 h-px bg-[var(--color-brand-accent)]" />

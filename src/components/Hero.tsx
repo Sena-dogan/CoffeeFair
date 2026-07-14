@@ -1,55 +1,94 @@
 import { motion } from "motion/react";
+import { ArrowUpRight, Coffee } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="hero" className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-stone-200">
-      {/* Background Image with Parallax effect feeling */}
-      <motion.div
-        initial={{ scale: 1.05 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute inset-0 z-0"
-      >
-        <img
-          src={`${import.meta.env.BASE_URL}images/hero-coffee.png`}
-          alt="Elegant coffee catering setup"
-          className="w-full h-full object-cover object-center grayscale-[0.3]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      </motion.div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center mt-20">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-white tracking-tight leading-[1.1] mb-6 font-light"
-        >
-          Elevating Corporate <br className="hidden md:block" /> <span className="italic">Coffee Experiences</span>
-        </motion.h1>
+    <section id="hero" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-stone-200/50 pt-24 pb-12 px-4 md:px-6 lg:px-8">
+      
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 h-auto md:h-[75vh] min-h-[600px]">
         
-        <motion.p
+        {/* Main Big Text Box */}
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-stone-200 max-w-2xl font-light mb-10 tracking-wide"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="md:col-span-3 md:row-span-2 bg-[var(--color-brand-bg)] rounded-3xl p-8 md:p-12 flex flex-col justify-between relative overflow-hidden shadow-sm"
         >
-          Custom roasting, premium equipment, and professional catering designed to make your events unforgettable.
-        </motion.p>
+          <div className="absolute -top-10 -right-10 opacity-5 rotate-12">
+            <Coffee className="w-64 h-64 text-[var(--color-brand-accent)]" />
+          </div>
+          <div className="max-w-2xl relative z-10">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[var(--color-brand-text)] tracking-tight leading-[1.05] mb-6 font-bold">
+              Elevating <br />
+              <span className="italic font-light text-[var(--color-brand-accent)]">Corporate</span> Coffee
+            </h1>
+            <p className="text-lg text-stone-600 font-light tracking-wide max-w-md">
+              Custom roasting, premium equipment, and masterful barista catering designed for unforgettable events.
+            </p>
+          </div>
+          <div className="mt-8 relative z-10">
+             <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-brand-text)] text-white font-bold tracking-widest text-xs uppercase hover:bg-[var(--color-brand-accent)] transition-all duration-300 rounded-full shadow-lg hover:-translate-y-1"
+            >
+              Book Your Event <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+        </motion.div>
 
-        <motion.a
-          href="#contact"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="px-10 py-4 bg-[var(--color-brand-text)] text-[var(--color-brand-bg)] font-medium tracking-widest text-xs uppercase hover:bg-[var(--color-brand-accent)] transition-colors duration-300 rounded-none"
+        {/* Tall Image Box */}
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="md:col-span-1 md:row-span-2 rounded-3xl overflow-hidden relative group shadow-sm min-h-[300px]"
         >
-          Book Your Event
-        </motion.a>
+          <img
+            src={`${import.meta.env.BASE_URL}images/portfolio-latte-art.png`}
+            alt="Latte Art"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </motion.div>
+
+        {/* Wide Image Box */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="md:col-span-2 md:row-span-1 rounded-3xl overflow-hidden relative group shadow-sm min-h-[200px]"
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}images/hero-coffee.png`}
+            alt="Coffee Pouring"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </motion.div>
+
+        {/* Small Info Box */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="md:col-span-1 md:row-span-1 bg-[var(--color-brand-accent)] rounded-3xl p-6 flex flex-col justify-center items-center text-center text-white shadow-sm min-h-[200px]"
+        >
+          <span className="text-5xl font-serif mb-1">100%</span>
+          <span className="text-[10px] uppercase tracking-widest font-bold opacity-90">Premium Roast</span>
+        </motion.div>
+
+        {/* Another Small Image Box */}
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="md:col-span-1 md:row-span-1 rounded-3xl overflow-hidden relative group shadow-sm min-h-[200px]"
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}images/portfolio-setup.png`}
+            alt="Coffee Setup"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </motion.div>
+
       </div>
     </section>
   );
