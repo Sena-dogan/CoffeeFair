@@ -21,7 +21,7 @@ export function Contact() {
         {/* Dark Card Section */}
         <div className="bg-[#1E1D1C] w-full rounded-[2rem] md:rounded-[3rem] py-24 md:py-32 px-6 flex flex-col items-center gap-10">
           <p className="font-serif italic text-stone-300 text-xl md:text-2xl">
-            Beraber çalışmak dileğiyle...
+            Looking forward to working together...
           </p>
           
           <div className="flex items-center gap-6">
